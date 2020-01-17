@@ -76,6 +76,14 @@ resource "aws_s3_bucket" "dev4" {
   }
 }
 */
+resource "aws_s3_bucket" "homologacao" {
+  bucket = "labs-homologacao"
+  acl    = "private"
+
+  tags = {
+    Name        = "labs-homologacao"
+  }
+}
 
 resource "aws_dynamodb_table" "dynamodb_homologacao" {
   provider = aws.us-east-2
